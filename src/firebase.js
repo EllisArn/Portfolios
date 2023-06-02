@@ -4,13 +4,13 @@ import { getAuth } from 'firebase/auth'
 import { getFirestore } from 'firebase/firestore'
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyCrHk-cCsZqAO5QRNVecKiO36iQGAhDOfY',
-  authDomain: 'portfolios-ellisarn.firebaseapp.com',
-  projectId: 'portfolios-ellisarn',
-  storageBucket: 'portfolios-ellisarn.appspot.com',
-  messagingSenderId: '800764911155',
-  appId: '1:800764911155:web:57e3001bb44e92463c0d46',
-  measurementId: 'G-BBYCP7XN06',
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 }
 
 const app = initializeApp(firebaseConfig)
