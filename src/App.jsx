@@ -1,19 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import {
-  doc,
-  getDoc,
-  collection,
-  getDocs,
-  addDoc,
-  setDoc,
-  query,
-  orderBy,
-  where,
-  limit,
-} from 'firebase/firestore'
+import { doc, getDoc, setDoc } from 'firebase/firestore'
 import { db } from './firebase.js'
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
-import { getStorage, ref, getDownloadURL } from 'firebase/storage'
 
 const email = import.meta.env.VITE_EMAIL
 const password = import.meta.env.VITE_PASSWORD
@@ -46,7 +34,6 @@ function App() {
           temp = { ...temp, ...docSnap.data()[portfolioName][i] }
           setPortfolio(temp)
         }
-        //setPortfolio(docSnap.data().LA1303)
       } else {
         setPortfolio(null)
         alert('No such document!')
