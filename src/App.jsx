@@ -8,6 +8,8 @@ const password = import.meta.env.VITE_PASSWORD
 
 let portfolioName = 'LB165'
 
+console.log('test')
+
 auth()
 
 function auth() {
