@@ -1,3 +1,5 @@
+name: Build
+
 on:
   push:
     branches:
@@ -23,13 +25,8 @@ jobs:
         VITE_EMAIL: ${{ secrets.VITE_EMAIL }}
         VITE_PASSWORD: ${{ secrets.VITE_PASSWORD }}
 
-      run: |
-        echo $VITE_FIREBASE_API_KEY
-        echo $VITE_FIREBASE_AUTH_DOMAIN
-        echo $VITE_FIREBASE_PROJECT_ID
-        echo $VITE_FIREBASE_STORAGE_BUCKET
-        echo $VITE_FIREBASE_MESSAGING_SENDER_ID
-        echo $VITE_FIREBASE_APP_ID
-        echo $VITE_FIREBASE_MEASUREMENT_ID
-        echo $VITE_EMAIL
-        echo $VITE_PASSWORD
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Build
+      run: npm run build
