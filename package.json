@@ -1,9 +1,9 @@
 {
-  "name": "la1305",
+  "name": "portfolios",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://ellisarn.com/LA1305",
+  "homepage": "https://ellisarn.com/portfolios",
   "scripts": {
     "dev": "vite",
     "predeploy": "npm run build",
