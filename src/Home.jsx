@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { doc, getDoc, getDocs, setDoc, collection } from 'firebase/firestore'
+import { getDocs, collection } from 'firebase/firestore'
 import { db } from './firebase.js'
 import auth from './auth.jsx'
 
 auth()
 
 function Home() {
-  // list all portfolios in the database to the console and list them on the page
   const portfolioRef = collection(db, 'portfolios')
   const [portfolios, setPortfolios] = useState([])
   useEffect(() => {
