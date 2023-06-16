@@ -23,7 +23,7 @@ function Home() {
       <ul>
         {portfolios.map((portfolio) => (
           <li key={portfolio.id}>
-            <a href={`/LA1305/${portfolio.id}`}>{portfolio.id}</a>
+            <a href={`/LA1305/#/${portfolio.id}`}>{portfolio.id}</a>
           </li>
         ))}
       </ul>
